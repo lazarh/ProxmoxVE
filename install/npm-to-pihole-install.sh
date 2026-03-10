@@ -21,7 +21,7 @@ $STD apt install -y \
 msg_ok "Installed Dependencies"
 
 # Skip full install if called with --update-only (from update_script)
-if [[ "${1}" == "--update-only" ]]; then
+if [[ "${1:-}" == "--update-only" ]]; then
   msg_info "Updating sync script"
   curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/install/npm-to-pihole-install.sh \
     | grep -A9999 '# --- BEGIN SYNC SCRIPT ---' \
