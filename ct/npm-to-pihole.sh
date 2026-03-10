@@ -30,7 +30,7 @@ function update_script() {
   fi
 
   msg_info "Updating ${APP}"
-  curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/install/npm-to-pihole-install.sh \
+  curl -fsSL https://raw.githubusercontent.com/lazarh/ProxmoxVE/main/install/npm-to-pihole-install.sh \
     | bash -s -- --update-only
   msg_ok "Updated ${APP}"
   msg_ok "Updated successfully!"
